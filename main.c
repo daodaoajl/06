@@ -1,22 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int square(int n)
+int combination (int n, int r)
 {
-     n = n*n;
+    
+    int div1, div2;//(div1 : 분자, div2 : 분모)
+    
+    div1 = factorial(n);
+    div2 = factorial(n-r)*factorial(r);
+    
+    return(div1/div2);//분수 
 }
 
-/*int square(int n)
+int factorial(int n)
 {
-     return (n*n);
-}*/
+    int res = 1;
+    int i;
+    
+    for(i = 1; i<= n; i++ )   
+          res = res*i  ;   
+    return res;
+}
 
-int main()
+int main(void)
 {
-    int n = 2;
-    square(n);
+    int n;
+    int r;
+    int result;
+    
+    printf("input n : \n");
+    scanf("%i",&n);
+    printf("input r : \n");
+    scanf("%i",&r);
   
-    printf("square result : %i\n", n);
+    result = combination(n,r);
+    printf("result is %i\n", result);
           
   system("PAUSE");	
   return 0;
