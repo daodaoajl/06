@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int square(int n)
-{
-     n = n*n;
-}
-
 /*int square(int n)
 {
-     return (n*n);
+     n = n*n;
 }*/
+
+int square(int n)
+{
+     return (n*n);
+}
 
 int main()
 {
